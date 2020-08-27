@@ -18,6 +18,20 @@ You will need the following things properly installed on your computer.
 * `cd journal`
 * `npm install`
 
+## Database Setup
+
+This app uses Firebase's Cloud Firestore. You'll need to set up a new account and put the following information in `.env`:
+
+```
+FIREBASE_API_KEY=""
+FIREBASE_AUTH_DOMAIN=""
+FIREBASE_DATABASE_URL=""
+FIREBASE_PROJECT_ID=""
+FIREBASE_STORAGE_BUCKET=""
+FIREBASE_MESSAGING_SENDER_ID=""
+FIREBASE_APP_ID=""
+```
+
 ## Running / Development
 
 * `ember serve`
