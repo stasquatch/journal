@@ -1,3 +1,5 @@
-{{#each model as |entry|}}
-  <EntryBlock @entry={{entry}} />
-{{/each}}
+<div class="tile is-vertical">
+  {{#each model as |entry|}}
+    <EntryBlock @entry={{entry}} />
+  {{/each}}
+</div>

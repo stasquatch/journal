@@ -36,6 +36,16 @@
 
 <section class="section">
   <div class="container">
-    {{outlet}}
+    <div class="tile is-ancestor">
+      <div class="tile is-3 is-vertical is-parent">
+        <div class="tile is-child box">
+          <p class="title">Questions</p>
+          <p>Blah</p>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        {{outlet}}
+      </div>
+    </div>
   </div>
 </section>
