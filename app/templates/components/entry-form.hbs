@@ -1,8 +1,22 @@
+<h2 class="title">{{full-date entry.createdAt}}</h2>
 <form {{action "onSubmit" entry on="submit"}}>
   <div class="field">
     <label class="label">How do you feel today?</label>
     <div class="control">
       <Textarea class="textarea" @value={{entry.body}} />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Rating</label>
+    <div class="control">
+      <div class="select">
+        <select>
+          <option>- Select -</option>
+          {{#each (range 1 11) as |num|}}
+            <option>{{num}}</option>
+          {{/each}}
+        </select>
+      </div>
     </div>
   </div>
   <div class="field">
