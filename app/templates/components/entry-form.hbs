@@ -1,0 +1,13 @@
+<form {{action "onSubmit" entry on="submit"}}>
+  <div class="field">
+    <label class="label">How do you feel today?</label>
+    <div class="control">
+      <Textarea class="textarea" @value={{entry.body}} />
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <button type="submit" class="button is-info">Create</button>
+    </div>
+  </div>
+</form>

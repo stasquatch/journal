@@ -1,7 +1,4 @@
-<form {{action "onSubmit" model on="submit"}}>
-  <label for="Body">
-    Text
-  </label>
-  <Input id="Body" @value={{model.body}} />
-  <button type="submit">Create</button>
-</form>
+<EntryForm
+  @entry={{model}}
+  @onSubmit={{action "onSubmit"}}
+/>
