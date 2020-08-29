@@ -1,2 +1,14 @@
-<p>{{markdown-to-html entry.body}}</p>
-<strong title={{full-date entry.createdAt}}>{{human-date entry.createdAt}}</strong>
+<div class="columns">
+  <div class="column is-one-third is-info">
+    <p class="has-text-weight-bold is-size-3 has-text-primary">
+      {{if entry.rating entry.rating "n/a"}}
+    </p>
+    <p>
+      {{full-date entry.createdAt}}
+    </p>
+  </div>
+  <div class="column">
+    <h3 class="has-text-weight-bold has-text-info">How do you feel today?</h3>
+    <p>{{markdown-to-html entry.body}}</p>
+  </div>
+</div>
