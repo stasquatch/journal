@@ -10,10 +10,10 @@
     <label class="label">Rating</label>
     <div class="control">
       <div class="select">
-        <select>
-          <option>- Select -</option>
+        <select onchange={{action (mut entry.rating) value="target.value"}}>
+          <option disabled>- Select -</option>
           {{#each (range 1 11) as |num|}}
-            <option>{{num}}</option>
+            <option selected={{eq entry.rating num}}>{{num}}</option>
           {{/each}}
         </select>
       </div>

@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('entries', function() {
     this.route('new');
   });
+
+  this.route('questions', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

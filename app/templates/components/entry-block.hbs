@@ -1,7 +1,14 @@
 <div class="columns">
   <div class="column is-one-third is-info">
     <p class="has-text-weight-bold is-size-3 has-text-primary">
-      {{if entry.rating entry.rating "n/a"}}
+      {{#if entry.rating}}
+        <span class="has-text-primary">
+          {{entry.rating}}
+        </span>
+        <span class="has-text-grey-light">/ 10</span>
+      {{else}}
+        <span class="has-text-grey-light">n/a</span>
+      {{/if}}
     </p>
     <p>
       {{full-date entry.createdAt}}
@@ -10,5 +17,10 @@
   <div class="column">
     <h3 class="has-text-weight-bold has-text-info">How do you feel today?</h3>
     <p>{{markdown-to-html entry.body}}</p>
+  </div>
+  <div class="pull right">
+      <span class="icon">
+        <i class="fas fa-trash-alt"></i>
+      </span>
   </div>
 </div>
